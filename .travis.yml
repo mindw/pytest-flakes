@@ -1,0 +1,18 @@
+sudo: false
+
+language: python
+python:
+    - '3.5' 
+
+env:
+  - TOX_ENV=py35
+  - TOX_ENV=py34
+  - TOX_ENV=py33
+  - TOX_ENV=py27
+
+install:
+  - python -m pip install -U pip setuptools wheel virtualenv
+  - python -m pip install -U tox
+
+script:
+  - python -m tox -e $TOX_ENV
