@@ -2,3 +2,7 @@
 /.coverage
 /.tox/
 /htmlcov*/
+
+*.egg-info/
+__pycache__/
+*.pyc
